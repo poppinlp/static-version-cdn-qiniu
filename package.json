@@ -1,0 +1,27 @@
+{
+  "name": "static-version-cdn-qiniu",
+  "version": "0.0.1",
+  "description": "Qiniu CDN adapter for static-version package.",
+  "main": "adapter.js",
+  "dependencies": {
+    "qiniu": "^6.1.8"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "node test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/poppinlp/static-version-cdn-qiniu.git"
+  },
+  "keywords": [
+    "static-version adapter",
+    "qiniu"
+  ],
+  "author": "PoppinLP",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/poppinlp/static-version-cdn-qiniu/issues"
+  },
+  "homepage": "https://github.com/poppinlp/static-version-cdn-qiniu#readme"
+}
