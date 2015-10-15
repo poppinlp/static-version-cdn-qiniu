@@ -1,6 +1,7 @@
 module.exports = function (config) {
     var qiniu = require('qiniu'),
         bucket = config.bucket,
+        prefix = config.prefix,
         ak = config.ak,
         sk = config.sk;
 
@@ -11,7 +12,7 @@ module.exports = function (config) {
         var token = (new qiniu.rs.PutPolicy(bucket)).token(),
             extra = new qiniu.io.PutExtra();
 
-        qiniu.io.putFile(token, localFile, localFile, extra, function (err, ret) {
+        qiniu.io.putFile(token, prefix + localFile, localFile, extra, function (err, ret) {
             err ? cb(ret) : cb('');
         });
     };
