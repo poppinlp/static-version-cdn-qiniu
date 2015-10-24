@@ -1,6 +1,6 @@
 {
   "name": "static-version-cdn-qiniu",
-  "version": "0.0.2",
+  "version": "0.1.0",
   "description": "Qiniu CDN adapter for static-version package.",
   "main": "adapter.js",
   "dependencies": {

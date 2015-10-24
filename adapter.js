@@ -9,11 +9,9 @@ module.exports = function (config) {
     qiniu.conf.SECRET_KEY = sk;
 
     return function (localFile, cb) {
-        var token = (new qiniu.rs.PutPolicy(bucket)).token(),
+        var token = (new qiniu.rs.PutPolicy(bucket + ':' + prefix + localFile)).token(),
             extra = new qiniu.io.PutExtra();
 
-        qiniu.io.putFile(token, prefix + localFile, localFile, extra, function (err, ret) {
-            err ? cb(ret) : cb('');
-        });
+        qiniu.io.putFile(token, prefix + localFile, localFile, extra, cb);
     };
 };

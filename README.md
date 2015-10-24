@@ -8,4 +8,4 @@ Qiniu CDN adapter for static-version package.
 
 ## History
 
-- 0.0.2 init
+- 0.1.0 init
